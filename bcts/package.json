@@ -1,0 +1,16 @@
+{
+  "name": "bcts",
+  "version": "1.0.0",
+  "description": "Brighton Collectibles Tech Screening",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Mood",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bcts-deployment
+  labels:
+    app: bcts
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bcts
+  template:
+    metadata:
+      labels:
+        app: bcts
+    spec:
+      containers:
+      - name: bcts
+        image: bcts
+        ports:
+        - containerPort: 8008
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bcts-service
+spec:
+  selector:
+    app: bcts
+  ports:
+    - protocol: TCP
+      port: 8008
+      targetPort: 8008
